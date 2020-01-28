@@ -7,11 +7,14 @@ To subscribe:
 const [ eventDetails ] = useWindowListener('eventName');
 
 useEffect(() => {
-    if (onEvent) {
+    if (eventDetails) {
       onEventHit(eventDetails)
     }
   }, [eventDetails]);
 
+const onEventHit = (eventDetails) => {
+  console.log(eventDetails);
+}
 ```
 
 To dispatch:
